@@ -31,15 +31,12 @@ export function App() {
     setTasks(updatedTask)
   }
 
-  // Esse bloco de código é disparado toda a vez que o array de
-  // tasks sofrer alguma alteração(add, remove, update)
   useEffect(() => {
     if(!isLoading) {
       localStorage.setItem(LOCALSTORAGE_TASKS_KEY, JSON.stringify(tasks))
     }
   }, [tasks])
 
-  // Esse bloco de código é disparado ao carregar a página do usuário
   useEffect(() => {
     const tasksLocal = localStorage.getItem(LOCALSTORAGE_TASKS_KEY)
     tasksLocal && setTasks(JSON.parse(tasksLocal))
@@ -62,7 +59,7 @@ export function App() {
   return (
     <div className={styles.container}>
       <div className={styles.content}>
-        <h1>TODOLIST</h1>
+        <h1>Task List</h1>
 
         <Form onSubmit={onAddTask} />
 
@@ -72,7 +69,7 @@ export function App() {
           type="text"
           value={searchTaskName}
           onChange={handleTermSearch}
-          placeholder="Pesquisar uma tarefa"
+          placeholder="Search Task"
         />
 
         <Tasks
@@ -84,12 +81,12 @@ export function App() {
 
         <footer className={styles.footer}>
           <h6>
-            Total de tarefas:
+            Total Tasks:
             <span>{totalTasks}</span>
           </h6>
 
           <h6>
-            Total de tarefas concluidas:
+            Completed Tasks:
             <span>{totalCompletedTasks}</span>
           </h6>
         </footer>

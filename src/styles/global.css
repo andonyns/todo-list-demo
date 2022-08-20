@@ -6,21 +6,21 @@
 }
 
 body {
-  background: blue;
+  background: #fff;
 }
 
 :root {
-  --background: #181820;
+  --background: #1e1e21;
   --background-light: #21212B;
 
   --primary: #FFFFFF;
-  --secondary: #F95738;
+  --secondary: #0b5631;
   --terciary: #bbbbbb;
 }
 
 body, input, button {
   color: var(--primary);
-  font: 400 16px 'Fredoka', sans-serif;
+  font: 400 16px 'Roboto', sans-serif;
 }
 
 body {

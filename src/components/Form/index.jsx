@@ -28,7 +28,7 @@ export function Form({ onSubmit }) {
       <Input
         type="text"
         value={taskName}
-        placeholder="Nome da tarefa"
+        placeholder="Task"
         onChange={event => setTaskName(event.target.value)}
       />
       
@@ -38,7 +38,7 @@ export function Form({ onSubmit }) {
         className={styles.form__button}
       >
         <FaPlus size={12} />
-        Adicionar
+        Add
       </button>
     </form>
   )

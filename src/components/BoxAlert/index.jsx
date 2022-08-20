@@ -8,17 +8,14 @@ export function BoxAlert({ type }) {
       {type === 'empty' && (
         <>
           <FaInfoCircle size={36} />
-          <p>A lista de tarefas está vazia.</p>
+          <p>The task list is empty</p>
         </>
       )}
 
       {type === 'warning' && (
         <>
           <FaInfoCircle size={36} />
-          <p>
-            Não foi possível localizar nenhuma tarefa,
-            tente novamente com outro termo.
-          </p>
+          <p>Task not found</p>
         </>
       )}
     </div>

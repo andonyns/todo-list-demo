@@ -25,7 +25,7 @@
 }
 
 .boxAlert.empty svg {
-  color: blue;
+  color: rgb(243, 243, 248);
 }
 
 .boxAlert.warning {
